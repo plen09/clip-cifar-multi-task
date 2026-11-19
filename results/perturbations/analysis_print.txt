@@ -1,0 +1,225 @@
+========================================================================================================
+SCENARIO coarse20   methods=['coarse_only', 'equal', 'fine_only', 'gradnorm', 'uncertainty']  seeds=[0, 1, 2]
+method          fine   coarse    mean   (test mean +/- std over seeds)
+coarse_only             --          84.79±0.10            --   
+equal              77.79±0.18       84.08±0.12       80.94±0.07
+fine_only          77.83±0.08            --               --   
+gradnorm           76.10±0.06       84.50±0.10       80.30±0.04
+uncertainty        77.48±0.26       83.70±0.09       80.59±0.15
+
+  paired delta vs equal (pp, per seed):
+    coarse_only coarse  ['+0.54', '+0.79', '+0.81']  mean +0.713 std 0.150 signs +++
+    fine_only   fine    ['+0.31', '-0.10', '-0.10']  mean +0.037 std 0.237 signs +--
+    gradnorm    fine    ['-1.55', '-1.74', '-1.78']  mean -1.690 std 0.123 signs ---
+    gradnorm    coarse  ['+0.41', '+0.45', '+0.42']  mean +0.427 std 0.021 signs +++
+    gradnorm    mean    ['-0.57', '-0.65', '-0.68']  mean -0.632 std 0.056 signs ---
+    uncertainty fine    ['+0.16', '-0.40', '-0.70']  mean -0.313 std 0.437 signs +--
+    uncertainty coarse  ['-0.40', '-0.35', '-0.37']  mean -0.373 std 0.025 signs ---
+    uncertainty mean    ['-0.12', '-0.38', '-0.53']  mean -0.343 std 0.209 signs ---
+
+  perturbation cost vs clean round-1 (same method/seed, pp):
+    coarse_only coarse  mean -0.720 std 0.092 signs ---
+    equal       fine    mean +0.553 std 0.358 signs +++
+    equal       coarse  mean -0.810 std 0.111 signs ---
+    fine_only   fine    mean +0.000 std 0.000 signs 000
+    gradnorm    fine    mean -1.187 std 0.201 signs ---
+    gradnorm    coarse  mean -0.513 std 0.057 signs ---
+    uncertainty fine    mean +0.433 std 0.206 signs +++
+    uncertainty coarse  mean -1.487 std 0.023 signs ---
+
+  weight_fine trajectory (mean over seeds):
+method      ep1     ep5     ep10    ep15    ep20    ep25    ep30    
+equal       1.000   1.000   1.000   1.000   1.000   1.000   1.000   
+gradnorm    1.076   0.542   0.404   0.356   0.331   0.318   0.308   
+uncertainty 0.924   0.688   0.620   0.627   0.682   0.756   0.826   
+clean ref   1.000   1.000   1.000   1.000   1.000   1.000   1.000   
+
+  gradnorm r_fine / r_coarse and rel. tracking error (mean over seeds):
+    ep1   r_f=1.013 r_c=0.987   err_f= 0.70% err_c= 0.79%
+    ep5   r_f=0.686 r_c=1.314   err_f= 3.19% err_c= 3.83%
+    ep10  r_f=0.591 r_c=1.409   err_f= 4.09% err_c= 6.57%
+    ep15  r_f=0.552 r_c=1.448   err_f= 5.13% err_c= 7.62%
+    ep20  r_f=0.529 r_c=1.471   err_f= 4.27% err_c= 8.62%
+    ep25  r_f=0.513 r_c=1.487   err_f= 4.53% err_c= 9.12%
+    ep30  r_f=0.500 r_c=1.500   err_f= 4.41% err_c= 9.60%
+
+  best-epoch audit:
+    coarse_only s0  best_ep=30  gap_to_2nd=0.120pp
+    coarse_only s1  best_ep=27  gap_to_2nd=0.060pp
+    coarse_only s2  best_ep=28  gap_to_2nd=0.000pp
+    equal       s0  best_ep=29  gap_to_2nd=0.270pp
+    equal       s1  best_ep=30  gap_to_2nd=0.140pp
+    equal       s2  best_ep=30  gap_to_2nd=0.010pp
+    fine_only   s0  best_ep=29  gap_to_2nd=0.260pp
+    fine_only   s1  best_ep=28  gap_to_2nd=0.020pp
+    fine_only   s2  best_ep=29  gap_to_2nd=0.000pp
+    gradnorm    s0  best_ep=29  gap_to_2nd=0.220pp
+    gradnorm    s1  best_ep=29  gap_to_2nd=0.020pp
+    gradnorm    s2  best_ep=30  gap_to_2nd=0.100pp
+    uncertainty s0  best_ep=29  gap_to_2nd=0.260pp
+    uncertainty s1  best_ep=29  gap_to_2nd=0.050pp
+    uncertainty s2  best_ep=25  gap_to_2nd=0.030pp
+
+========================================================================================================
+SCENARIO fine20   methods=['coarse_only', 'equal', 'fine_only', 'gradnorm', 'uncertainty']  seeds=[0, 1, 2]
+method          fine   coarse    mean   (test mean +/- std over seeds)
+coarse_only             --          85.51±0.08            --   
+equal              76.41±0.22       85.41±0.16       80.91±0.04
+fine_only          76.43±0.08            --               --   
+gradnorm           76.62±0.04       84.35±0.12       80.48±0.04
+uncertainty        75.33±0.38       85.63±0.12       80.48±0.13
+
+  paired delta vs equal (pp, per seed):
+    coarse_only coarse  ['-0.12', '+0.32', '+0.09']  mean +0.097 std 0.220 signs -++
+    fine_only   fine    ['+0.20', '-0.19', '+0.05']  mean +0.020 std 0.197 signs +-+
+    gradnorm    fine    ['+0.37', '-0.10', '+0.34']  mean +0.203 std 0.263 signs +-+
+    gradnorm    coarse  ['-1.26', '-0.76', '-1.18']  mean -1.067 std 0.269 signs ---
+    gradnorm    mean    ['-0.44', '-0.43', '-0.42']  mean -0.432 std 0.013 signs ---
+    uncertainty fine    ['-1.31', '-0.94', '-0.99']  mean -1.080 std 0.201 signs ---
+    uncertainty coarse  ['+0.21', '+0.28', '+0.16']  mean +0.217 std 0.060 signs +++
+    uncertainty mean    ['-0.55', '-0.33', '-0.42']  mean -0.432 std 0.111 signs ---
+
+  perturbation cost vs clean round-1 (same method/seed, pp):
+    coarse_only coarse  mean +0.000 std 0.000 signs 000
+    equal       fine    mean -0.827 std 0.373 signs ---
+    equal       coarse  mean +0.527 std 0.150 signs +++
+    fine_only   fine    mean -1.397 std 0.117 signs ---
+    gradnorm    fine    mean -0.673 std 0.121 signs ---
+    gradnorm    coarse  mean -0.670 std 0.165 signs ---
+    uncertainty fine    mean -1.713 std 0.440 signs ---
+    uncertainty coarse  mean +0.440 std 0.044 signs +++
+
+  weight_fine trajectory (mean over seeds):
+method      ep1     ep5     ep10    ep15    ep20    ep25    ep30    
+equal       1.000   1.000   1.000   1.000   1.000   1.000   1.000   
+gradnorm    1.327   1.574   1.591   1.609   1.605   1.608   1.609   
+uncertainty 0.922   0.584   0.397   0.305   0.260   0.243   0.241   
+clean ref   1.000   1.000   1.000   1.000   1.000   1.000   1.000   
+
+  gradnorm r_fine / r_coarse and rel. tracking error (mean over seeds):
+    ep1   r_f=1.158 r_c=0.842   err_f= 3.09% err_c= 0.96%
+    ep5   r_f=1.437 r_c=0.563   err_f= 6.71% err_c= 7.16%
+    ep10  r_f=1.457 r_c=0.543   err_f= 7.88% err_c= 5.37%
+    ep15  r_f=1.466 r_c=0.534   err_f= 8.04% err_c= 6.23%
+    ep20  r_f=1.471 r_c=0.529   err_f= 8.34% err_c= 5.71%
+    ep25  r_f=1.475 r_c=0.525   err_f= 8.47% err_c= 5.80%
+    ep30  r_f=1.479 r_c=0.521   err_f= 8.55% err_c= 5.97%
+
+  best-epoch audit:
+    coarse_only s0  best_ep=28  gap_to_2nd=0.180pp
+    coarse_only s1  best_ep=29  gap_to_2nd=0.020pp
+    coarse_only s2  best_ep=30  gap_to_2nd=0.040pp
+    equal       s0  best_ep=29  gap_to_2nd=0.080pp
+    equal       s1  best_ep=29  gap_to_2nd=0.030pp
+    equal       s2  best_ep=29  gap_to_2nd=0.090pp
+    fine_only   s0  best_ep=29  gap_to_2nd=0.020pp
+    fine_only   s1  best_ep=29  gap_to_2nd=0.100pp
+    fine_only   s2  best_ep=27  gap_to_2nd=0.120pp
+    gradnorm    s0  best_ep=29  gap_to_2nd=0.060pp
+    gradnorm    s1  best_ep=29  gap_to_2nd=0.090pp
+    gradnorm    s2  best_ep=27  gap_to_2nd=0.000pp
+    uncertainty s0  best_ep=29  gap_to_2nd=0.220pp
+    uncertainty s1  best_ep=29  gap_to_2nd=0.040pp
+    uncertainty s2  best_ep=29  gap_to_2nd=0.090pp
+
+========================================================================================================
+SCENARIO gaussian07   methods=['equal', 'gradnorm', 'uncertainty']  seeds=[0, 1, 2]
+method          fine   coarse    mean   (test mean +/- std over seeds)
+equal              75.33±0.08       82.23±0.13       78.78±0.03
+gradnorm           75.21±0.11       82.38±0.02       78.80±0.06
+uncertainty        74.82±0.21       82.37±0.10       78.59±0.06
+
+  paired delta vs equal (pp, per seed):
+    gradnorm    fine    ['-0.33', '-0.03', '+0.02']  mean -0.113 std 0.189 signs --+
+    gradnorm    coarse  ['+0.28', '+0.13', '+0.04']  mean +0.150 std 0.121 signs +++
+    gradnorm    mean    ['-0.02', '+0.05', '+0.03']  mean +0.018 std 0.039 signs -++
+    uncertainty fine    ['-0.75', '-0.22', '-0.56']  mean -0.510 std 0.269 signs ---
+    uncertainty coarse  ['+0.32', '+0.03', '+0.08']  mean +0.143 std 0.155 signs +++
+    uncertainty mean    ['-0.21', '-0.09', '-0.24']  mean -0.183 std 0.078 signs ---
+
+  perturbation cost vs clean round-1 (same method/seed, pp):
+    equal       fine    mean -1.913 std 0.107 signs ---
+    equal       coarse  mean -2.660 std 0.125 signs ---
+    gradnorm    fine    mean -2.077 std 0.251 signs ---
+    gradnorm    coarse  mean -2.640 std 0.035 signs ---
+    uncertainty fine    mean -2.230 std 0.262 signs ---
+    uncertainty coarse  mean -2.820 std 0.035 signs ---
+
+  weight_fine trajectory (mean over seeds):
+method      ep1     ep5     ep10    ep15    ep20    ep25    ep30    
+equal       1.000   1.000   1.000   1.000   1.000   1.000   1.000   
+gradnorm    1.222   1.153   1.001   0.939   0.895   0.865   0.855   
+uncertainty 0.923   0.643   0.511   0.456   0.442   0.452   0.467   
+clean ref   1.000   1.000   1.000   1.000   1.000   1.000   1.000   
+
+  gradnorm r_fine / r_coarse and rel. tracking error (mean over seeds):
+    ep1   r_f=1.094 r_c=0.906   err_f= 1.08% err_c= 0.18%
+    ep5   r_f=1.101 r_c=0.899   err_f= 0.38% err_c= 0.82%
+    ep10  r_f=1.033 r_c=0.967   err_f= 0.33% err_c= 0.31%
+    ep15  r_f=1.008 r_c=0.992   err_f= 0.25% err_c= 0.34%
+    ep20  r_f=0.991 r_c=1.009   err_f= 0.32% err_c= 0.34%
+    ep25  r_f=0.983 r_c=1.017   err_f= 0.35% err_c= 0.29%
+    ep30  r_f=0.979 r_c=1.021   err_f= 0.56% err_c= 0.48%
+
+  best-epoch audit:
+    equal       s0  best_ep=30  gap_to_2nd=0.100pp
+    equal       s1  best_ep=29  gap_to_2nd=0.260pp
+    equal       s2  best_ep=29  gap_to_2nd=0.160pp
+    gradnorm    s0  best_ep=29  gap_to_2nd=0.090pp
+    gradnorm    s1  best_ep=29  gap_to_2nd=0.170pp
+    gradnorm    s2  best_ep=29  gap_to_2nd=0.160pp
+    uncertainty s0  best_ep=29  gap_to_2nd=0.120pp
+    uncertainty s1  best_ep=29  gap_to_2nd=0.190pp
+    uncertainty s2  best_ep=29  gap_to_2nd=0.330pp
+
+========================================================================================================
+SCENARIO lowdata10   methods=['equal', 'gradnorm', 'uncertainty']  seeds=[0, 1, 2]
+method          fine   coarse    mean   (test mean +/- std over seeds)
+equal              62.63±0.43       77.94±0.22       70.28±0.32
+gradnorm           63.61±0.42       77.16±0.24       70.39±0.33
+uncertainty        62.15±0.37       77.88±0.28       70.02±0.32
+
+  paired delta vs equal (pp, per seed):
+    gradnorm    fine    ['+1.08', '+1.00', '+0.88']  mean +0.987 std 0.101 signs +++
+    gradnorm    coarse  ['-0.80', '-0.82', '-0.73']  mean -0.783 std 0.047 signs ---
+    gradnorm    mean    ['+0.14', '+0.09', '+0.08']  mean +0.102 std 0.034 signs +++
+    uncertainty fine    ['-0.49', '-0.41', '-0.53']  mean -0.477 std 0.061 signs ---
+    uncertainty coarse  ['-0.03', '-0.14', '+0.00']  mean -0.057 std 0.074 signs --0
+    uncertainty mean    ['-0.26', '-0.28', '-0.27']  mean -0.267 std 0.008 signs ---
+
+  perturbation cost vs clean round-1 (same method/seed, pp):
+    equal       fine    mean -14.613 std 0.365 signs ---
+    equal       coarse  mean -6.947 std 0.215 signs ---
+    gradnorm    fine    mean -13.677 std 0.282 signs ---
+    gradnorm    coarse  mean -7.860 std 0.193 signs ---
+    uncertainty fine    mean -14.897 std 0.343 signs ---
+    uncertainty coarse  mean -7.307 std 0.168 signs ---
+
+  weight_fine trajectory (mean over seeds):
+method      ep1     ep5     ep10    ep15    ep20    ep25    ep30    
+equal       1.000   1.000   1.000   1.000   1.000   1.000   1.000   
+gradnorm    1.064   1.238   1.331   1.335   1.289   1.245   1.227   
+uncertainty 0.992   0.926   0.867   0.824   0.791   0.765   0.743   
+clean ref   1.000   1.000   1.000   1.000   1.000   1.000   1.000   
+
+  gradnorm r_fine / r_coarse and rel. tracking error (mean over seeds):
+    ep1   r_f=1.004 r_c=0.996   err_f= 2.13% err_c= 2.16%
+    ep5   r_f=1.113 r_c=0.887   err_f= 0.83% err_c= 0.24%
+    ep10  r_f=1.221 r_c=0.779   err_f= 2.30% err_c= 1.76%
+    ep15  r_f=1.224 r_c=0.776   err_f= 2.92% err_c= 0.73%
+    ep20  r_f=1.201 r_c=0.799   err_f= 1.49% err_c= 1.56%
+    ep25  r_f=1.175 r_c=0.825   err_f= 1.61% err_c= 0.80%
+    ep30  r_f=1.153 r_c=0.847   err_f= 1.70% err_c= 3.51%
+
+  best-epoch audit:
+    equal       s0  best_ep=30  gap_to_2nd=0.350pp
+    equal       s1  best_ep=30  gap_to_2nd=0.440pp
+    equal       s2  best_ep=29  gap_to_2nd=0.120pp
+    gradnorm    s0  best_ep=30  gap_to_2nd=0.350pp
+    gradnorm    s1  best_ep=30  gap_to_2nd=0.460pp
+    gradnorm    s2  best_ep=29  gap_to_2nd=0.120pp
+    uncertainty s0  best_ep=30  gap_to_2nd=0.330pp
+    uncertainty s1  best_ep=30  gap_to_2nd=0.430pp
+    uncertainty s2  best_ep=29  gap_to_2nd=0.230pp
+
+Saved D:\Sept\学习\专业课\前沿\Multi-task\results_perturb\analysis.json

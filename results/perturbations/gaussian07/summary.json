@@ -1,0 +1,53 @@
+[
+  {
+    "method": "equal",
+    "n_seeds": 3,
+    "seeds": "0,1,2",
+    "test_fine_acc_pct_mean": 75.32666666666667,
+    "test_fine_acc_pct_std": 0.08082903768654794,
+    "test_coarse_acc_pct_mean": 82.22666666666666,
+    "test_coarse_acc_pct_std": 0.12503332889007382,
+    "test_mean_acc_pct_mean": 78.77666666666666,
+    "test_mean_acc_pct_std": 0.03329164059239941,
+    "best_validation_score_pct_mean": 79.18666666666667,
+    "best_validation_score_pct_std": 0.16563010998406366,
+    "final_weight_fine_mean": 1.0,
+    "final_weight_fine_std": 0.0,
+    "final_weight_coarse_mean": 1.0,
+    "final_weight_coarse_std": 0.0
+  },
+  {
+    "method": "uncertainty",
+    "n_seeds": 3,
+    "seeds": "0,1,2",
+    "test_fine_acc_pct_mean": 74.81666666666666,
+    "test_fine_acc_pct_std": 0.21221058723196104,
+    "test_coarse_acc_pct_mean": 82.37,
+    "test_coarse_acc_pct_std": 0.0953939201416942,
+    "test_mean_acc_pct_mean": 78.59333333333333,
+    "test_mean_acc_pct_std": 0.059651767227241234,
+    "best_validation_score_pct_mean": 79.06666666666666,
+    "best_validation_score_pct_std": 0.13012814197294945,
+    "final_weight_fine_mean": 0.4655367434024811,
+    "final_weight_fine_std": 0.001315778571157654,
+    "final_weight_coarse_mean": 0.7029865980148315,
+    "final_weight_coarse_std": 0.00010620034061282463
+  },
+  {
+    "method": "gradnorm",
+    "n_seeds": 3,
+    "seeds": "0,1,2",
+    "test_fine_acc_pct_mean": 75.21333333333334,
+    "test_fine_acc_pct_std": 0.10969655114602586,
+    "test_coarse_acc_pct_mean": 82.37666666666667,
+    "test_coarse_acc_pct_std": 0.015275252316519529,
+    "test_mean_acc_pct_mean": 78.795,
+    "test_mean_acc_pct_std": 0.055677643628300626,
+    "best_validation_score_pct_mean": 79.21333333333332,
+    "best_validation_score_pct_std": 0.11015141094572163,
+    "final_weight_fine_mean": 0.8583246469497681,
+    "final_weight_fine_std": 0.03895553332080359,
+    "final_weight_coarse_mean": 1.1416753927866619,
+    "final_weight_coarse_std": 0.03895549906127508
+  }
+]

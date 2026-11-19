@@ -1,0 +1,61 @@
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\train_hetero.py --scenario rotation --features-dir data\hetero_rotation --runs-dir runs_hetero_rotation_quick --method fine_only --seed 0 --epochs 2 --batch-size 256 --lr 0.001 --alpha 1.5 --weight-lr 0.01 --fixed-fine 1.0 --fixed-aux 1.0 --diagnose-every 10 --train-fraction 1.0 --split-seed 2026 --device auto
+[HETERO] scenario=rotation method=fine_only seed=0 device=cuda train=45000 val=5000 test=10000
+  ep=01/2 val fine=30.10 aux=25.00 weight=1.000/0.000 single-task
+  ep=02/2 val fine=45.58 aux=24.93 weight=1.000/0.000 single-task
+[TEST] rotation fine_only seed=0 fine=45.09 aux=None best_epoch=2 -> runs_hetero_rotation_quick\fine_only\seed_0
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\train_hetero.py --scenario rotation --features-dir data\hetero_rotation --runs-dir runs_hetero_rotation_quick --method aux_only --seed 0 --epochs 2 --batch-size 256 --lr 0.001 --alpha 1.5 --weight-lr 0.01 --fixed-fine 1.0 --fixed-aux 1.0 --diagnose-every 10 --train-fraction 1.0 --split-seed 2026 --device auto
+[HETERO] scenario=rotation method=aux_only seed=0 device=cuda train=45000 val=5000 test=10000
+  ep=01/2 val fine=1.12 aux=51.62 weight=0.000/1.000 single-task
+  ep=02/2 val fine=1.02 aux=52.89 weight=0.000/1.000 single-task
+[TEST] rotation aux_only seed=0 fine=None aux=52.56 best_epoch=2 -> runs_hetero_rotation_quick\aux_only\seed_0
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\train_hetero.py --scenario rotation --features-dir data\hetero_rotation --runs-dir runs_hetero_rotation_quick --method equal --seed 0 --epochs 2 --batch-size 256 --lr 0.001 --alpha 1.5 --weight-lr 0.01 --fixed-fine 1.0 --fixed-aux 1.0 --diagnose-every 10 --train-fraction 1.0 --split-seed 2026 --device auto
+[HETERO] scenario=rotation method=equal seed=0 device=cuda train=45000 val=5000 test=10000
+  ep=01/2 val fine=24.32 aux=46.73 weight=1.000/1.000 cos=+0.125 conflict=33.3%
+  ep=02/2 val fine=39.60 aux=50.30 weight=1.000/1.000 cos=-0.028 conflict=72.2%
+[TEST] rotation equal seed=0 fine=39.96 aux=50.2575 best_epoch=2 -> runs_hetero_rotation_quick\equal\seed_0
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\train_hetero.py --scenario rotation --features-dir data\hetero_rotation --runs-dir runs_hetero_rotation_quick --method uncertainty --seed 0 --epochs 2 --batch-size 256 --lr 0.001 --alpha 1.5 --weight-lr 0.01 --fixed-fine 1.0 --fixed-aux 1.0 --diagnose-every 10 --train-fraction 1.0 --split-seed 2026 --device auto
+[HETERO] scenario=rotation method=uncertainty seed=0 device=cuda train=45000 val=5000 test=10000
+  ep=01/2 val fine=24.02 aux=46.73 weight=0.924/0.925 cos=+0.132 conflict=33.3%
+  ep=02/2 val fine=38.90 aux=50.05 weight=0.817/0.810 cos=-0.018 conflict=66.7%
+[TEST] rotation uncertainty seed=0 fine=39.49 aux=50.0525 best_epoch=2 -> runs_hetero_rotation_quick\uncertainty\seed_0
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\train_hetero.py --scenario rotation --features-dir data\hetero_rotation --runs-dir runs_hetero_rotation_quick --method gradnorm --seed 0 --epochs 2 --batch-size 256 --lr 0.001 --alpha 1.5 --weight-lr 0.01 --fixed-fine 1.0 --fixed-aux 1.0 --diagnose-every 10 --train-fraction 1.0 --split-seed 2026 --device auto
+[HETERO] scenario=rotation method=gradnorm seed=0 device=cuda train=45000 val=5000 test=10000
+  ep=01/2 val fine=22.70 aux=46.67 weight=0.979/1.021 cos=+0.098 conflict=38.9%
+  ep=02/2 val fine=37.78 aux=50.85 weight=0.824/1.176 cos=-0.023 conflict=61.1%
+[TEST] rotation gradnorm seed=0 fine=38.54 aux=50.785 best_epoch=2 -> runs_hetero_rotation_quick\gradnorm\seed_0
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\train_hetero.py --scenario rotation --features-dir data\hetero_rotation --runs-dir runs_hetero_rotation_quick --method pcgrad --seed 0 --epochs 2 --batch-size 256 --lr 0.001 --alpha 1.5 --weight-lr 0.01 --fixed-fine 1.0 --fixed-aux 1.0 --diagnose-every 10 --train-fraction 1.0 --split-seed 2026 --device auto
+[HETERO] scenario=rotation method=pcgrad seed=0 device=cuda train=45000 val=5000 test=10000
+  ep=01/2 val fine=24.22 aux=46.66 weight=1.000/1.000 cos=+0.012 conflict=50.6%
+  ep=02/2 val fine=39.64 aux=50.27 weight=1.000/1.000 cos=+0.028 conflict=46.6%
+[TEST] rotation pcgrad seed=0 fine=39.96 aux=50.145 best_epoch=2 -> runs_hetero_rotation_quick\pcgrad\seed_0
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\summarize_hetero.py --runs-dir runs_hetero_rotation_quick --out-dir results_hetero_rotation_quick
+
+Scenario: rotation | test accuracy % ± sample SD (single seed = no SD inference)
+  fine_only    n=1 fine=45.09±0.00 aux=— joint=— conflict=—
+  aux_only     n=1 fine=— aux=52.56±0.00 joint=— conflict=—
+  equal        n=1 fine=39.96±0.00 aux=50.26±0.00 joint=45.11±0.00 conflict=0.53±0.00
+  uncertainty  n=1 fine=39.49±0.00 aux=50.05±0.00 joint=44.77±0.00 conflict=0.50±0.00
+  gradnorm     n=1 fine=38.54±0.00 aux=50.78±0.00 joint=44.66±0.00 conflict=0.50±0.00
+  pcgrad       n=1 fine=39.96±0.00 aux=50.15±0.00 joint=45.05±0.00 conflict=0.49±0.00
+Saved results_hetero_rotation_quick\summary.csv and results_hetero_rotation_quick\paired_differences.csv
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\plot_hetero.py --runs-dir runs_hetero_rotation_quick --out-dir results_hetero_rotation_quick\figures
+Saved results_hetero_rotation_quick\figures\validation_fine.png
+Saved results_hetero_rotation_quick\figures\validation_aux.png
+Saved results_hetero_rotation_quick\figures\gradient_cosine.png
+Saved results_hetero_rotation_quick\figures\gradient_conflict_rate.png
+Saved results_hetero_rotation_quick\figures\raw_grad_fine.png
+Saved results_hetero_rotation_quick\figures\raw_grad_aux.png
+Saved results_hetero_rotation_quick\figures\weight_fine.png
+Saved results_hetero_rotation_quick\figures\weight_aux.png
+Saved results_hetero_rotation_quick\figures\gradnorm_rate_fine.png
+Saved results_hetero_rotation_quick\figures\gradnorm_rate_aux.png
+
+Done; results: results_hetero_rotation_quick

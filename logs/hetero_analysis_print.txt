@@ -1,0 +1,124 @@
+============================================================================================================
+SCENARIO color  methods=['aux_only', 'equal', 'fine_only', 'gradnorm', 'pcgrad', 'uncertainty'] seeds=[0, 1, 2]
+method                fine           aux          mean  cos_mean  conflict  w_fine_end
+aux_only                --   72.13±0.24            --     --          --            0.000
+equal          75.66±0.35   71.72±0.32   73.69±0.29     0.041     0.397       1.000
+fine_only      76.31±0.10            --            --     --          --            1.000
+gradnorm       74.26±0.23   72.24±0.40   73.25±0.31     0.046     0.381       0.407
+pcgrad         75.59±0.32   71.63±0.23   73.61±0.27     0.045     0.385       1.000
+uncertainty    75.37±0.31   71.93±0.26   73.65±0.16     0.043     0.383       0.730
+
+  paired delta vs equal (pp, per seed):
+    aux_only    aux   ['+0.46', '-0.06', '+0.83']  mean +0.410 std 0.447 signs +-+
+    fine_only   fine  ['+0.98', '+0.61', '+0.36']  mean +0.650 std 0.312 signs +++
+    gradnorm    fine  ['-1.26', '-1.40', '-1.55']  mean -1.403 std 0.145 signs ---
+    gradnorm    aux   ['+0.30', '+0.50', '+0.77']  mean +0.523 std 0.236 signs +++
+    gradnorm    mean  ['-0.48', '-0.45', '-0.39']  mean -0.440 std 0.046 signs ---
+    pcgrad      fine  ['-0.04', '-0.01', '-0.15']  mean -0.067 std 0.074 signs ---
+    pcgrad      aux   ['-0.07', '-0.19', '+0.01']  mean -0.083 std 0.101 signs --+
+    pcgrad      mean  ['-0.05', '-0.10', '-0.07']  mean -0.075 std 0.023 signs ---
+    uncertainty fine  ['-0.25', '-0.33', '-0.30']  mean -0.293 std 0.040 signs ---
+    uncertainty aux   ['+0.50', '+0.07', '+0.08']  mean +0.217 std 0.245 signs +++
+    uncertainty mean  ['+0.12', '-0.13', '-0.11']  mean -0.038 std 0.142 signs +--
+
+  multi-task minus single-task (within scenario, pp):
+    gradnorm    fine  mean -2.053 std 0.169 signs ---
+    gradnorm    aux   mean +0.113 std 0.390 signs -+-
+    pcgrad      fine  mean -0.717 std 0.268 signs ---
+    pcgrad      aux   mean -0.493 std 0.346 signs ---
+    uncertainty fine  mean -0.943 std 0.285 signs ---
+    uncertainty aux   mean -0.193 std 0.484 signs ++-
+
+  equal: grad cosine / conflict rate / raw norm ratio aux/fine:
+    ep1   cos +0.088  conflict  40.7%  |g_aux|/|g_fine| 1.063
+    ep5   cos +0.040  conflict  40.7%  |g_aux|/|g_fine| 1.244
+    ep10  cos +0.075  conflict  22.2%  |g_aux|/|g_fine| 1.337
+    ep15  cos +0.047  conflict  33.3%  |g_aux|/|g_fine| 1.236
+    ep20  cos +0.027  conflict  46.3%  |g_aux|/|g_fine| 1.193
+    ep25  cos +0.019  conflict  42.6%  |g_aux|/|g_fine| 1.229
+    ep30  cos +0.039  conflict  31.5%  |g_aux|/|g_fine| 1.187
+    fraction of epochs with mean cos<0: 10.0%
+
+  weight_fine trajectory (mean over seeds):
+method      ep1     ep5     ep10    ep15    ep20    ep25    ep30    
+equal       1.000   1.000   1.000   1.000   1.000   1.000   1.000   
+gradnorm    1.008   0.669   0.542   0.455   0.436   0.420   0.428   
+pcgrad      1.000   1.000   1.000   1.000   1.000   1.000   1.000   
+uncertainty 0.926   0.678   0.585   0.572   0.607   0.666   0.727   
+
+  gradnorm r_fine / r_aux and rel. tracking error:
+    ep1   r_f=0.981 r_a=1.019  err_f= 8.01% err_a= 7.45%
+    ep5   r_f=0.716 r_a=1.284  err_f= 6.02% err_a= 1.89%
+    ep10  r_f=0.622 r_a=1.378  err_f=11.75% err_a= 3.36%
+    ep15  r_f=0.589 r_a=1.411  err_f=11.84% err_a= 4.71%
+    ep20  r_f=0.569 r_a=1.431  err_f=13.64% err_a= 5.10%
+    ep25  r_f=0.558 r_a=1.442  err_f=15.78% err_a= 4.97%
+    ep30  r_f=0.551 r_a=1.449  err_f=13.11% err_a= 5.90%
+
+  aux decodability and best-epoch audit:
+    aux_only test aux = 72.13%  (chance 25%)
+    best_epoch range 28-30; gap-to-2nd mean 0.179pp max 0.540pp
+  Saved D:\Sept\学习\专业课\前沿\Multi-task\results_hetero_color\analysis.json
+
+============================================================================================================
+SCENARIO rotation  methods=['aux_only', 'equal', 'fine_only', 'gradnorm', 'pcgrad', 'uncertainty'] seeds=[0, 1, 2]
+method                fine           aux          mean  cos_mean  conflict  w_fine_end
+aux_only                --   56.02±0.39            --     --          --            0.000
+equal          72.45±0.12   55.20±0.04   63.82±0.05     0.019     0.415       1.000
+fine_only      73.07±0.42            --            --     --          --            1.000
+gradnorm       71.16±0.18   56.04±0.15   63.60±0.16     0.022     0.399       0.406
+pcgrad         72.57±0.25   55.30±0.23   63.93±0.24     0.019     0.414       1.000
+uncertainty    71.80±0.35   55.16±0.35   63.48±0.33     0.020     0.411       0.390
+
+  paired delta vs equal (pp, per seed):
+    aux_only    aux   ['+1.18', '+0.48', '+0.81']  mean +0.824 std 0.350 signs +++
+    fine_only   fine  ['+0.29', '+1.00', '+0.55']  mean +0.613 std 0.359 signs +++
+    gradnorm    fine  ['-1.46', '-1.46', '-0.96']  mean -1.293 std 0.289 signs ---
+    gradnorm    aux   ['+0.66', '+0.89', '+0.98']  mean +0.842 std 0.167 signs +++
+    gradnorm    mean  ['-0.40', '-0.29', '+0.01']  mean -0.225 std 0.213 signs --+
+    pcgrad      fine  ['-0.08', '-0.11', '+0.54']  mean +0.117 std 0.367 signs --+
+    pcgrad      aux   ['-0.03', '-0.02', '+0.35']  mean +0.100 std 0.217 signs --+
+    pcgrad      mean  ['-0.05', '-0.07', '+0.44']  mean +0.108 std 0.292 signs --+
+    uncertainty fine  ['-1.02', '-0.78', '-0.16']  mean -0.653 std 0.444 signs ---
+    uncertainty aux   ['-0.23', '-0.23', '+0.35']  mean -0.037 std 0.339 signs --+
+    uncertainty mean  ['-0.62', '-0.51', '+0.10']  mean -0.345 std 0.388 signs --+
+
+  multi-task minus single-task (within scenario, pp):
+    gradnorm    fine  mean -1.907 std 0.494 signs ---
+    gradnorm    aux   mean +0.018 std 0.484 signs -++
+    pcgrad      fine  mean -0.497 std 0.561 signs ---
+    pcgrad      aux   mean -0.724 std 0.421 signs ---
+    uncertainty fine  mean -1.267 std 0.536 signs ---
+    uncertainty aux   mean -0.861 std 0.496 signs ---
+
+  equal: grad cosine / conflict rate / raw norm ratio aux/fine:
+    ep1   cos +0.009  conflict  48.3%  |g_aux|/|g_fine| 1.052
+    ep5   cos +0.023  conflict  43.4%  |g_aux|/|g_fine| 1.117
+    ep10  cos +0.020  conflict  41.5%  |g_aux|/|g_fine| 0.989
+    ep15  cos +0.018  conflict  41.1%  |g_aux|/|g_fine| 1.160
+    ep20  cos +0.014  conflict  41.1%  |g_aux|/|g_fine| 0.968
+    ep25  cos +0.021  conflict  37.9%  |g_aux|/|g_fine| 1.023
+    ep30  cos +0.014  conflict  43.2%  |g_aux|/|g_fine| 0.961
+    fraction of epochs with mean cos<0: 0.0%
+
+  weight_fine trajectory (mean over seeds):
+method      ep1     ep5     ep10    ep15    ep20    ep25    ep30    
+equal       1.000   1.000   1.000   1.000   1.000   1.000   1.000   
+gradnorm    1.001   0.723   0.543   0.516   0.453   0.437   0.420   
+pcgrad      1.000   1.000   1.000   1.000   1.000   1.000   1.000   
+uncertainty 0.924   0.625   0.464   0.392   0.367   0.372   0.389   
+
+  gradnorm r_fine / r_aux and rel. tracking error:
+    ep1   r_f=0.944 r_a=1.056  err_f= 6.71% err_a= 5.82%
+    ep5   r_f=0.741 r_a=1.259  err_f= 2.41% err_a= 3.10%
+    ep10  r_f=0.674 r_a=1.326  err_f= 4.82% err_a= 3.58%
+    ep15  r_f=0.644 r_a=1.356  err_f=10.67% err_a= 2.74%
+    ep20  r_f=0.630 r_a=1.370  err_f= 8.35% err_a= 4.00%
+    ep25  r_f=0.618 r_a=1.382  err_f= 8.58% err_a= 4.38%
+    ep30  r_f=0.609 r_a=1.391  err_f= 7.05% err_a= 5.15%
+
+  aux decodability and best-epoch audit:
+    aux_only test aux = 56.02%  (chance 25%)
+    best_epoch range 24-30; gap-to-2nd mean 0.123pp max 0.525pp
+  Saved D:\Sept\学习\专业课\前沿\Multi-task\results_hetero_rotation\analysis.json
+

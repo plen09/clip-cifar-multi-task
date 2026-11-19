@@ -1,0 +1,24 @@
+data/
+weights/
+# Keep compact summaries and figures as evidence; ignore binary checkpoints.
+*.pt
+*.pth
+*.safetensors
+.local_archive/
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+# LaTeX intermediates and generated previews (source/images remain tracked).
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+docs/mtl_exploratory_paper/
+!logs/*.log
+.env
+.env.*
+!.env.example

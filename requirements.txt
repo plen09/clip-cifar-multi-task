@@ -1,0 +1,10 @@
+numpy>=1.26,<3
+matplotlib>=3.8
+tqdm>=4.66
+Pillow>=10.0
+open_clip_torch>=2.29
+safetensors>=0.4
+# Install a matching CUDA-compatible torch + torchvision build BEFORE this file.
+# This OFFLINE variant does not require the GitHub openai/CLIP package.
+
+pytest>=8.0  # Optional developer self-check suite

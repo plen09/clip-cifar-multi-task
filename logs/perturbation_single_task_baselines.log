@@ -1,0 +1,472 @@
+
+=== coarse20: Coarse training labels flipped with p=0.2 ===
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\run_all.py --features-dir data\features --runs-dir runs_perturb\coarse20 --results-dir results_perturb\coarse20 --methods fine_only coarse_only --seeds 0 1 2 --epochs 30 --batch-size 256 --device auto --fixed-fine 1.0 --fixed-coarse 1.0 --label-noise coarse --label-noise-rate 0.2 --skip-existing
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\train.py --features-dir data\features --runs-dir runs_perturb\coarse20 --method fine_only --seed 0 --epochs 30 --batch-size 256 --alpha 1.5 --weight-lr 0.01 --device auto --fixed-fine 1.0 --fixed-coarse 1.0 --feature-noise none --feature-noise-level 0.0 --label-noise coarse --label-noise-rate 0.2 --train-fraction 1.0 --corruption-seed 1729
+RUN fine_only seed=0 on cuda; train=45000, val=5000, test=10000; feature_noise=none:0.0; label_noise=coarse:0.2 (8932 changed); train_fraction=1.0
+  epoch 01/30 | val selected acc 45.90% | task weights 1.000/0.000
+  epoch 02/30 | val selected acc 60.60% | task weights 1.000/0.000
+  epoch 03/30 | val selected acc 67.60% | task weights 1.000/0.000
+  epoch 04/30 | val selected acc 70.12% | task weights 1.000/0.000
+  epoch 05/30 | val selected acc 71.32% | task weights 1.000/0.000
+  epoch 06/30 | val selected acc 72.84% | task weights 1.000/0.000
+  epoch 07/30 | val selected acc 73.36% | task weights 1.000/0.000
+  epoch 08/30 | val selected acc 73.94% | task weights 1.000/0.000
+  epoch 09/30 | val selected acc 74.76% | task weights 1.000/0.000
+  epoch 10/30 | val selected acc 75.18% | task weights 1.000/0.000
+  epoch 11/30 | val selected acc 75.92% | task weights 1.000/0.000
+  epoch 12/30 | val selected acc 75.70% | task weights 1.000/0.000
+  epoch 13/30 | val selected acc 76.20% | task weights 1.000/0.000
+  epoch 14/30 | val selected acc 76.22% | task weights 1.000/0.000
+  epoch 15/30 | val selected acc 76.64% | task weights 1.000/0.000
+  epoch 16/30 | val selected acc 76.66% | task weights 1.000/0.000
+  epoch 17/30 | val selected acc 76.58% | task weights 1.000/0.000
+  epoch 18/30 | val selected acc 77.04% | task weights 1.000/0.000
+  epoch 19/30 | val selected acc 76.88% | task weights 1.000/0.000
+  epoch 20/30 | val selected acc 77.16% | task weights 1.000/0.000
+  epoch 21/30 | val selected acc 77.44% | task weights 1.000/0.000
+  epoch 22/30 | val selected acc 77.52% | task weights 1.000/0.000
+  epoch 23/30 | val selected acc 77.72% | task weights 1.000/0.000
+  epoch 24/30 | val selected acc 77.98% | task weights 1.000/0.000
+  epoch 25/30 | val selected acc 77.60% | task weights 1.000/0.000
+  epoch 26/30 | val selected acc 77.72% | task weights 1.000/0.000
+  epoch 27/30 | val selected acc 77.88% | task weights 1.000/0.000
+  epoch 28/30 | val selected acc 78.04% | task weights 1.000/0.000
+  epoch 29/30 | val selected acc 78.30% | task weights 1.000/0.000
+  epoch 30/30 | val selected acc 77.94% | task weights 1.000/0.000
+TEST fine_only seed=0 | fine=77.9 | coarse=None | best_epoch=29
+Outputs: runs_perturb\coarse20\fine_only\seed_0
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\train.py --features-dir data\features --runs-dir runs_perturb\coarse20 --method fine_only --seed 1 --epochs 30 --batch-size 256 --alpha 1.5 --weight-lr 0.01 --device auto --fixed-fine 1.0 --fixed-coarse 1.0 --feature-noise none --feature-noise-level 0.0 --label-noise coarse --label-noise-rate 0.2 --train-fraction 1.0 --corruption-seed 1729
+RUN fine_only seed=1 on cuda; train=45000, val=5000, test=10000; feature_noise=none:0.0; label_noise=coarse:0.2 (8851 changed); train_fraction=1.0
+  epoch 01/30 | val selected acc 45.14% | task weights 1.000/0.000
+  epoch 02/30 | val selected acc 61.12% | task weights 1.000/0.000
+  epoch 03/30 | val selected acc 66.70% | task weights 1.000/0.000
+  epoch 04/30 | val selected acc 69.44% | task weights 1.000/0.000
+  epoch 05/30 | val selected acc 70.86% | task weights 1.000/0.000
+  epoch 06/30 | val selected acc 72.02% | task weights 1.000/0.000
+  epoch 07/30 | val selected acc 73.02% | task weights 1.000/0.000
+  epoch 08/30 | val selected acc 74.10% | task weights 1.000/0.000
+  epoch 09/30 | val selected acc 74.26% | task weights 1.000/0.000
+  epoch 10/30 | val selected acc 74.76% | task weights 1.000/0.000
+  epoch 11/30 | val selected acc 74.84% | task weights 1.000/0.000
+  epoch 12/30 | val selected acc 75.32% | task weights 1.000/0.000
+  epoch 13/30 | val selected acc 75.72% | task weights 1.000/0.000
+  epoch 14/30 | val selected acc 75.98% | task weights 1.000/0.000
+  epoch 15/30 | val selected acc 76.58% | task weights 1.000/0.000
+  epoch 16/30 | val selected acc 76.52% | task weights 1.000/0.000
+  epoch 17/30 | val selected acc 76.86% | task weights 1.000/0.000
+  epoch 18/30 | val selected acc 77.18% | task weights 1.000/0.000
+  epoch 19/30 | val selected acc 77.22% | task weights 1.000/0.000
+  epoch 20/30 | val selected acc 77.42% | task weights 1.000/0.000
+  epoch 21/30 | val selected acc 77.34% | task weights 1.000/0.000
+  epoch 22/30 | val selected acc 77.40% | task weights 1.000/0.000
+  epoch 23/30 | val selected acc 77.68% | task weights 1.000/0.000
+  epoch 24/30 | val selected acc 77.50% | task weights 1.000/0.000
+  epoch 25/30 | val selected acc 77.68% | task weights 1.000/0.000
+  epoch 26/30 | val selected acc 77.60% | task weights 1.000/0.000
+  epoch 27/30 | val selected acc 77.58% | task weights 1.000/0.000
+  epoch 28/30 | val selected acc 77.94% | task weights 1.000/0.000
+  epoch 29/30 | val selected acc 77.92% | task weights 1.000/0.000
+  epoch 30/30 | val selected acc 77.92% | task weights 1.000/0.000
+TEST fine_only seed=1 | fine=77.75 | coarse=None | best_epoch=28
+Outputs: runs_perturb\coarse20\fine_only\seed_1
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\train.py --features-dir data\features --runs-dir runs_perturb\coarse20 --method fine_only --seed 2 --epochs 30 --batch-size 256 --alpha 1.5 --weight-lr 0.01 --device auto --fixed-fine 1.0 --fixed-coarse 1.0 --feature-noise none --feature-noise-level 0.0 --label-noise coarse --label-noise-rate 0.2 --train-fraction 1.0 --corruption-seed 1729
+RUN fine_only seed=2 on cuda; train=45000, val=5000, test=10000; feature_noise=none:0.0; label_noise=coarse:0.2 (8840 changed); train_fraction=1.0
+  epoch 01/30 | val selected acc 48.96% | task weights 1.000/0.000
+  epoch 02/30 | val selected acc 62.18% | task weights 1.000/0.000
+  epoch 03/30 | val selected acc 67.02% | task weights 1.000/0.000
+  epoch 04/30 | val selected acc 70.02% | task weights 1.000/0.000
+  epoch 05/30 | val selected acc 71.42% | task weights 1.000/0.000
+  epoch 06/30 | val selected acc 72.60% | task weights 1.000/0.000
+  epoch 07/30 | val selected acc 73.36% | task weights 1.000/0.000
+  epoch 08/30 | val selected acc 73.94% | task weights 1.000/0.000
+  epoch 09/30 | val selected acc 74.48% | task weights 1.000/0.000
+  epoch 10/30 | val selected acc 74.70% | task weights 1.000/0.000
+  epoch 11/30 | val selected acc 75.72% | task weights 1.000/0.000
+  epoch 12/30 | val selected acc 76.18% | task weights 1.000/0.000
+  epoch 13/30 | val selected acc 75.98% | task weights 1.000/0.000
+  epoch 14/30 | val selected acc 76.18% | task weights 1.000/0.000
+  epoch 15/30 | val selected acc 76.66% | task weights 1.000/0.000
+  epoch 16/30 | val selected acc 76.56% | task weights 1.000/0.000
+  epoch 17/30 | val selected acc 76.96% | task weights 1.000/0.000
+  epoch 18/30 | val selected acc 77.28% | task weights 1.000/0.000
+  epoch 19/30 | val selected acc 77.16% | task weights 1.000/0.000
+  epoch 20/30 | val selected acc 76.96% | task weights 1.000/0.000
+  epoch 21/30 | val selected acc 77.28% | task weights 1.000/0.000
+  epoch 22/30 | val selected acc 77.52% | task weights 1.000/0.000
+  epoch 23/30 | val selected acc 77.62% | task weights 1.000/0.000
+  epoch 24/30 | val selected acc 77.76% | task weights 1.000/0.000
+  epoch 25/30 | val selected acc 77.78% | task weights 1.000/0.000
+  epoch 26/30 | val selected acc 77.46% | task weights 1.000/0.000
+  epoch 27/30 | val selected acc 78.04% | task weights 1.000/0.000
+  epoch 28/30 | val selected acc 77.86% | task weights 1.000/0.000
+  epoch 29/30 | val selected acc 78.08% | task weights 1.000/0.000
+  epoch 30/30 | val selected acc 78.08% | task weights 1.000/0.000
+TEST fine_only seed=2 | fine=77.84 | coarse=None | best_epoch=29
+Outputs: runs_perturb\coarse20\fine_only\seed_2
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\train.py --features-dir data\features --runs-dir runs_perturb\coarse20 --method coarse_only --seed 0 --epochs 30 --batch-size 256 --alpha 1.5 --weight-lr 0.01 --device auto --fixed-fine 1.0 --fixed-coarse 1.0 --feature-noise none --feature-noise-level 0.0 --label-noise coarse --label-noise-rate 0.2 --train-fraction 1.0 --corruption-seed 1729
+RUN coarse_only seed=0 on cuda; train=45000, val=5000, test=10000; feature_noise=none:0.0; label_noise=coarse:0.2 (8932 changed); train_fraction=1.0
+  epoch 01/30 | val selected acc 72.50% | task weights 0.000/1.000
+  epoch 02/30 | val selected acc 77.92% | task weights 0.000/1.000
+  epoch 03/30 | val selected acc 79.78% | task weights 0.000/1.000
+  epoch 04/30 | val selected acc 81.16% | task weights 0.000/1.000
+  epoch 05/30 | val selected acc 81.76% | task weights 0.000/1.000
+  epoch 06/30 | val selected acc 82.94% | task weights 0.000/1.000
+  epoch 07/30 | val selected acc 83.10% | task weights 0.000/1.000
+  epoch 08/30 | val selected acc 83.36% | task weights 0.000/1.000
+  epoch 09/30 | val selected acc 83.58% | task weights 0.000/1.000
+  epoch 10/30 | val selected acc 83.42% | task weights 0.000/1.000
+  epoch 11/30 | val selected acc 83.96% | task weights 0.000/1.000
+  epoch 12/30 | val selected acc 84.00% | task weights 0.000/1.000
+  epoch 13/30 | val selected acc 84.26% | task weights 0.000/1.000
+  epoch 14/30 | val selected acc 84.02% | task weights 0.000/1.000
+  epoch 15/30 | val selected acc 84.40% | task weights 0.000/1.000
+  epoch 16/30 | val selected acc 84.40% | task weights 0.000/1.000
+  epoch 17/30 | val selected acc 84.52% | task weights 0.000/1.000
+  epoch 18/30 | val selected acc 84.20% | task weights 0.000/1.000
+  epoch 19/30 | val selected acc 84.20% | task weights 0.000/1.000
+  epoch 20/30 | val selected acc 84.68% | task weights 0.000/1.000
+  epoch 21/30 | val selected acc 84.80% | task weights 0.000/1.000
+  epoch 22/30 | val selected acc 84.52% | task weights 0.000/1.000
+  epoch 23/30 | val selected acc 85.06% | task weights 0.000/1.000
+  epoch 24/30 | val selected acc 84.48% | task weights 0.000/1.000
+  epoch 25/30 | val selected acc 84.64% | task weights 0.000/1.000
+  epoch 26/30 | val selected acc 84.76% | task weights 0.000/1.000
+  epoch 27/30 | val selected acc 84.68% | task weights 0.000/1.000
+  epoch 28/30 | val selected acc 84.98% | task weights 0.000/1.000
+  epoch 29/30 | val selected acc 84.84% | task weights 0.000/1.000
+  epoch 30/30 | val selected acc 85.18% | task weights 0.000/1.000
+TEST coarse_only seed=0 | fine=None | coarse=84.72 | best_epoch=30
+Outputs: runs_perturb\coarse20\coarse_only\seed_0
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\train.py --features-dir data\features --runs-dir runs_perturb\coarse20 --method coarse_only --seed 1 --epochs 30 --batch-size 256 --alpha 1.5 --weight-lr 0.01 --device auto --fixed-fine 1.0 --fixed-coarse 1.0 --feature-noise none --feature-noise-level 0.0 --label-noise coarse --label-noise-rate 0.2 --train-fraction 1.0 --corruption-seed 1729
+RUN coarse_only seed=1 on cuda; train=45000, val=5000, test=10000; feature_noise=none:0.0; label_noise=coarse:0.2 (8851 changed); train_fraction=1.0
+  epoch 01/30 | val selected acc 72.76% | task weights 0.000/1.000
+  epoch 02/30 | val selected acc 77.82% | task weights 0.000/1.000
+  epoch 03/30 | val selected acc 79.52% | task weights 0.000/1.000
+  epoch 04/30 | val selected acc 80.88% | task weights 0.000/1.000
+  epoch 05/30 | val selected acc 81.76% | task weights 0.000/1.000
+  epoch 06/30 | val selected acc 82.42% | task weights 0.000/1.000
+  epoch 07/30 | val selected acc 82.86% | task weights 0.000/1.000
+  epoch 08/30 | val selected acc 83.36% | task weights 0.000/1.000
+  epoch 09/30 | val selected acc 83.46% | task weights 0.000/1.000
+  epoch 10/30 | val selected acc 83.52% | task weights 0.000/1.000
+  epoch 11/30 | val selected acc 83.74% | task weights 0.000/1.000
+  epoch 12/30 | val selected acc 83.70% | task weights 0.000/1.000
+  epoch 13/30 | val selected acc 83.78% | task weights 0.000/1.000
+  epoch 14/30 | val selected acc 83.88% | task weights 0.000/1.000
+  epoch 15/30 | val selected acc 84.14% | task weights 0.000/1.000
+  epoch 16/30 | val selected acc 84.12% | task weights 0.000/1.000
+  epoch 17/30 | val selected acc 84.42% | task weights 0.000/1.000
+  epoch 18/30 | val selected acc 84.48% | task weights 0.000/1.000
+  epoch 19/30 | val selected acc 84.40% | task weights 0.000/1.000
+  epoch 20/30 | val selected acc 84.74% | task weights 0.000/1.000
+  epoch 21/30 | val selected acc 84.52% | task weights 0.000/1.000
+  epoch 22/30 | val selected acc 84.68% | task weights 0.000/1.000
+  epoch 23/30 | val selected acc 84.56% | task weights 0.000/1.000
+  epoch 24/30 | val selected acc 84.64% | task weights 0.000/1.000
+  epoch 25/30 | val selected acc 84.58% | task weights 0.000/1.000
+  epoch 26/30 | val selected acc 84.90% | task weights 0.000/1.000
+  epoch 27/30 | val selected acc 84.96% | task weights 0.000/1.000
+  epoch 28/30 | val selected acc 84.70% | task weights 0.000/1.000
+  epoch 29/30 | val selected acc 84.86% | task weights 0.000/1.000
+  epoch 30/30 | val selected acc 84.90% | task weights 0.000/1.000
+TEST coarse_only seed=1 | fine=None | coarse=84.74000000000001 | best_epoch=27
+Outputs: runs_perturb\coarse20\coarse_only\seed_1
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\train.py --features-dir data\features --runs-dir runs_perturb\coarse20 --method coarse_only --seed 2 --epochs 30 --batch-size 256 --alpha 1.5 --weight-lr 0.01 --device auto --fixed-fine 1.0 --fixed-coarse 1.0 --feature-noise none --feature-noise-level 0.0 --label-noise coarse --label-noise-rate 0.2 --train-fraction 1.0 --corruption-seed 1729
+RUN coarse_only seed=2 on cuda; train=45000, val=5000, test=10000; feature_noise=none:0.0; label_noise=coarse:0.2 (8840 changed); train_fraction=1.0
+  epoch 01/30 | val selected acc 73.24% | task weights 0.000/1.000
+  epoch 02/30 | val selected acc 77.82% | task weights 0.000/1.000
+  epoch 03/30 | val selected acc 80.04% | task weights 0.000/1.000
+  epoch 04/30 | val selected acc 80.74% | task weights 0.000/1.000
+  epoch 05/30 | val selected acc 82.08% | task weights 0.000/1.000
+  epoch 06/30 | val selected acc 82.70% | task weights 0.000/1.000
+  epoch 07/30 | val selected acc 83.12% | task weights 0.000/1.000
+  epoch 08/30 | val selected acc 83.34% | task weights 0.000/1.000
+  epoch 09/30 | val selected acc 83.36% | task weights 0.000/1.000
+  epoch 10/30 | val selected acc 83.80% | task weights 0.000/1.000
+  epoch 11/30 | val selected acc 83.88% | task weights 0.000/1.000
+  epoch 12/30 | val selected acc 84.00% | task weights 0.000/1.000
+  epoch 13/30 | val selected acc 84.36% | task weights 0.000/1.000
+  epoch 14/30 | val selected acc 84.14% | task weights 0.000/1.000
+  epoch 15/30 | val selected acc 84.32% | task weights 0.000/1.000
+  epoch 16/30 | val selected acc 84.62% | task weights 0.000/1.000
+  epoch 17/30 | val selected acc 84.76% | task weights 0.000/1.000
+  epoch 18/30 | val selected acc 84.66% | task weights 0.000/1.000
+  epoch 19/30 | val selected acc 84.78% | task weights 0.000/1.000
+  epoch 20/30 | val selected acc 84.76% | task weights 0.000/1.000
+  epoch 21/30 | val selected acc 84.76% | task weights 0.000/1.000
+  epoch 22/30 | val selected acc 85.00% | task weights 0.000/1.000
+  epoch 23/30 | val selected acc 84.80% | task weights 0.000/1.000
+  epoch 24/30 | val selected acc 84.96% | task weights 0.000/1.000
+  epoch 25/30 | val selected acc 84.84% | task weights 0.000/1.000
+  epoch 26/30 | val selected acc 85.02% | task weights 0.000/1.000
+  epoch 27/30 | val selected acc 84.72% | task weights 0.000/1.000
+  epoch 28/30 | val selected acc 85.20% | task weights 0.000/1.000
+  epoch 29/30 | val selected acc 85.02% | task weights 0.000/1.000
+  epoch 30/30 | val selected acc 85.20% | task weights 0.000/1.000
+TEST coarse_only seed=2 | fine=None | coarse=84.91 | best_epoch=28
+Outputs: runs_perturb\coarse20\coarse_only\seed_2
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\summarize.py --runs-dir runs_perturb\coarse20 --out-dir results_perturb\coarse20
+
+Summary (test set, accuracy %; sample SD):
+  fine_only    n=3: fine 77.83 +/- 0.08 | coarse N/A
+  coarse_only  n=3: fine N/A | coarse 84.79 +/- 0.10
+  equal        n=3: fine 77.79 +/- 0.18 | coarse 84.08 +/- 0.12
+  uncertainty  n=3: fine 77.48 +/- 0.26 | coarse 83.70 +/- 0.09
+  gradnorm     n=3: fine 76.10 +/- 0.06 | coarse 84.50 +/- 0.10
+Saved: results_perturb\coarse20\summary.csv and results_perturb\coarse20\summary.json
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\plot_results.py --runs-dir runs_perturb\coarse20 --out-dir results_perturb\coarse20\figures
+Saved results_perturb\coarse20\figures\validation_fine.png
+Saved results_perturb\coarse20\figures\validation_coarse.png
+Saved results_perturb\coarse20\figures\weight_fine.png
+Saved results_perturb\coarse20\figures\weight_coarse.png
+Saved results_perturb\coarse20\figures\gradnorm_fine.png
+Saved results_perturb\coarse20\figures\gradnorm_coarse.png
+Saved results_perturb\coarse20\figures\gradnorm_rate_fine.png
+Saved results_perturb\coarse20\figures\gradnorm_observed_vs_target.png
+
+Done.
+
+=== fine20: Fine training labels flipped with p=0.2 ===
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\run_all.py --features-dir data\features --runs-dir runs_perturb\fine20 --results-dir results_perturb\fine20 --methods fine_only coarse_only --seeds 0 1 2 --epochs 30 --batch-size 256 --device auto --fixed-fine 1.0 --fixed-coarse 1.0 --label-noise fine --label-noise-rate 0.2 --skip-existing
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\train.py --features-dir data\features --runs-dir runs_perturb\fine20 --method fine_only --seed 0 --epochs 30 --batch-size 256 --alpha 1.5 --weight-lr 0.01 --device auto --fixed-fine 1.0 --fixed-coarse 1.0 --feature-noise none --feature-noise-level 0.0 --label-noise fine --label-noise-rate 0.2 --train-fraction 1.0 --corruption-seed 1729
+RUN fine_only seed=0 on cuda; train=45000, val=5000, test=10000; feature_noise=none:0.0; label_noise=fine:0.2 (8932 changed); train_fraction=1.0
+  epoch 01/30 | val selected acc 42.30% | task weights 1.000/0.000
+  epoch 02/30 | val selected acc 59.06% | task weights 1.000/0.000
+  epoch 03/30 | val selected acc 66.04% | task weights 1.000/0.000
+  epoch 04/30 | val selected acc 68.56% | task weights 1.000/0.000
+  epoch 05/30 | val selected acc 70.78% | task weights 1.000/0.000
+  epoch 06/30 | val selected acc 72.38% | task weights 1.000/0.000
+  epoch 07/30 | val selected acc 72.54% | task weights 1.000/0.000
+  epoch 08/30 | val selected acc 73.82% | task weights 1.000/0.000
+  epoch 09/30 | val selected acc 74.26% | task weights 1.000/0.000
+  epoch 10/30 | val selected acc 73.90% | task weights 1.000/0.000
+  epoch 11/30 | val selected acc 74.62% | task weights 1.000/0.000
+  epoch 12/30 | val selected acc 74.80% | task weights 1.000/0.000
+  epoch 13/30 | val selected acc 75.36% | task weights 1.000/0.000
+  epoch 14/30 | val selected acc 75.36% | task weights 1.000/0.000
+  epoch 15/30 | val selected acc 75.12% | task weights 1.000/0.000
+  epoch 16/30 | val selected acc 75.34% | task weights 1.000/0.000
+  epoch 17/30 | val selected acc 75.52% | task weights 1.000/0.000
+  epoch 18/30 | val selected acc 75.66% | task weights 1.000/0.000
+  epoch 19/30 | val selected acc 75.94% | task weights 1.000/0.000
+  epoch 20/30 | val selected acc 75.44% | task weights 1.000/0.000
+  epoch 21/30 | val selected acc 75.78% | task weights 1.000/0.000
+  epoch 22/30 | val selected acc 75.86% | task weights 1.000/0.000
+  epoch 23/30 | val selected acc 76.16% | task weights 1.000/0.000
+  epoch 24/30 | val selected acc 76.14% | task weights 1.000/0.000
+  epoch 25/30 | val selected acc 76.22% | task weights 1.000/0.000
+  epoch 26/30 | val selected acc 76.16% | task weights 1.000/0.000
+  epoch 27/30 | val selected acc 76.10% | task weights 1.000/0.000
+  epoch 28/30 | val selected acc 76.28% | task weights 1.000/0.000
+  epoch 29/30 | val selected acc 76.30% | task weights 1.000/0.000
+  epoch 30/30 | val selected acc 76.28% | task weights 1.000/0.000
+TEST fine_only seed=0 | fine=76.48 | coarse=None | best_epoch=29
+Outputs: runs_perturb\fine20\fine_only\seed_0
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\train.py --features-dir data\features --runs-dir runs_perturb\fine20 --method fine_only --seed 1 --epochs 30 --batch-size 256 --alpha 1.5 --weight-lr 0.01 --device auto --fixed-fine 1.0 --fixed-coarse 1.0 --feature-noise none --feature-noise-level 0.0 --label-noise fine --label-noise-rate 0.2 --train-fraction 1.0 --corruption-seed 1729
+RUN fine_only seed=1 on cuda; train=45000, val=5000, test=10000; feature_noise=none:0.0; label_noise=fine:0.2 (8851 changed); train_fraction=1.0
+  epoch 01/30 | val selected acc 42.58% | task weights 1.000/0.000
+  epoch 02/30 | val selected acc 60.22% | task weights 1.000/0.000
+  epoch 03/30 | val selected acc 65.68% | task weights 1.000/0.000
+  epoch 04/30 | val selected acc 68.80% | task weights 1.000/0.000
+  epoch 05/30 | val selected acc 70.16% | task weights 1.000/0.000
+  epoch 06/30 | val selected acc 71.78% | task weights 1.000/0.000
+  epoch 07/30 | val selected acc 72.50% | task weights 1.000/0.000
+  epoch 08/30 | val selected acc 73.40% | task weights 1.000/0.000
+  epoch 09/30 | val selected acc 73.68% | task weights 1.000/0.000
+  epoch 10/30 | val selected acc 74.46% | task weights 1.000/0.000
+  epoch 11/30 | val selected acc 74.82% | task weights 1.000/0.000
+  epoch 12/30 | val selected acc 75.00% | task weights 1.000/0.000
+  epoch 13/30 | val selected acc 75.00% | task weights 1.000/0.000
+  epoch 14/30 | val selected acc 75.34% | task weights 1.000/0.000
+  epoch 15/30 | val selected acc 76.00% | task weights 1.000/0.000
+  epoch 16/30 | val selected acc 75.64% | task weights 1.000/0.000
+  epoch 17/30 | val selected acc 75.74% | task weights 1.000/0.000
+  epoch 18/30 | val selected acc 76.66% | task weights 1.000/0.000
+  epoch 19/30 | val selected acc 76.02% | task weights 1.000/0.000
+  epoch 20/30 | val selected acc 75.88% | task weights 1.000/0.000
+  epoch 21/30 | val selected acc 76.64% | task weights 1.000/0.000
+  epoch 22/30 | val selected acc 76.26% | task weights 1.000/0.000
+  epoch 23/30 | val selected acc 76.90% | task weights 1.000/0.000
+  epoch 24/30 | val selected acc 76.68% | task weights 1.000/0.000
+  epoch 25/30 | val selected acc 77.18% | task weights 1.000/0.000
+  epoch 26/30 | val selected acc 77.18% | task weights 1.000/0.000
+  epoch 27/30 | val selected acc 77.42% | task weights 1.000/0.000
+  epoch 28/30 | val selected acc 77.36% | task weights 1.000/0.000
+  epoch 29/30 | val selected acc 77.52% | task weights 1.000/0.000
+  epoch 30/30 | val selected acc 77.28% | task weights 1.000/0.000
+TEST fine_only seed=1 | fine=76.48 | coarse=None | best_epoch=29
+Outputs: runs_perturb\fine20\fine_only\seed_1
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\train.py --features-dir data\features --runs-dir runs_perturb\fine20 --method fine_only --seed 2 --epochs 30 --batch-size 256 --alpha 1.5 --weight-lr 0.01 --device auto --fixed-fine 1.0 --fixed-coarse 1.0 --feature-noise none --feature-noise-level 0.0 --label-noise fine --label-noise-rate 0.2 --train-fraction 1.0 --corruption-seed 1729
+RUN fine_only seed=2 on cuda; train=45000, val=5000, test=10000; feature_noise=none:0.0; label_noise=fine:0.2 (8840 changed); train_fraction=1.0
+  epoch 01/30 | val selected acc 45.18% | task weights 1.000/0.000
+  epoch 02/30 | val selected acc 61.02% | task weights 1.000/0.000
+  epoch 03/30 | val selected acc 65.50% | task weights 1.000/0.000
+  epoch 04/30 | val selected acc 68.92% | task weights 1.000/0.000
+  epoch 05/30 | val selected acc 70.72% | task weights 1.000/0.000
+  epoch 06/30 | val selected acc 72.26% | task weights 1.000/0.000
+  epoch 07/30 | val selected acc 72.64% | task weights 1.000/0.000
+  epoch 08/30 | val selected acc 73.18% | task weights 1.000/0.000
+  epoch 09/30 | val selected acc 74.12% | task weights 1.000/0.000
+  epoch 10/30 | val selected acc 74.24% | task weights 1.000/0.000
+  epoch 11/30 | val selected acc 74.56% | task weights 1.000/0.000
+  epoch 12/30 | val selected acc 74.74% | task weights 1.000/0.000
+  epoch 13/30 | val selected acc 75.06% | task weights 1.000/0.000
+  epoch 14/30 | val selected acc 75.04% | task weights 1.000/0.000
+  epoch 15/30 | val selected acc 75.66% | task weights 1.000/0.000
+  epoch 16/30 | val selected acc 75.70% | task weights 1.000/0.000
+  epoch 17/30 | val selected acc 75.82% | task weights 1.000/0.000
+  epoch 18/30 | val selected acc 75.98% | task weights 1.000/0.000
+  epoch 19/30 | val selected acc 76.18% | task weights 1.000/0.000
+  epoch 20/30 | val selected acc 76.42% | task weights 1.000/0.000
+  epoch 21/30 | val selected acc 76.56% | task weights 1.000/0.000
+  epoch 22/30 | val selected acc 76.74% | task weights 1.000/0.000
+  epoch 23/30 | val selected acc 77.06% | task weights 1.000/0.000
+  epoch 24/30 | val selected acc 76.82% | task weights 1.000/0.000
+  epoch 25/30 | val selected acc 76.70% | task weights 1.000/0.000
+  epoch 26/30 | val selected acc 76.52% | task weights 1.000/0.000
+  epoch 27/30 | val selected acc 77.24% | task weights 1.000/0.000
+  epoch 28/30 | val selected acc 76.90% | task weights 1.000/0.000
+  epoch 29/30 | val selected acc 77.12% | task weights 1.000/0.000
+  epoch 30/30 | val selected acc 77.00% | task weights 1.000/0.000
+TEST fine_only seed=2 | fine=76.34 | coarse=None | best_epoch=27
+Outputs: runs_perturb\fine20\fine_only\seed_2
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\train.py --features-dir data\features --runs-dir runs_perturb\fine20 --method coarse_only --seed 0 --epochs 30 --batch-size 256 --alpha 1.5 --weight-lr 0.01 --device auto --fixed-fine 1.0 --fixed-coarse 1.0 --feature-noise none --feature-noise-level 0.0 --label-noise fine --label-noise-rate 0.2 --train-fraction 1.0 --corruption-seed 1729
+RUN coarse_only seed=0 on cuda; train=45000, val=5000, test=10000; feature_noise=none:0.0; label_noise=fine:0.2 (8932 changed); train_fraction=1.0
+  epoch 01/30 | val selected acc 73.00% | task weights 0.000/1.000
+  epoch 02/30 | val selected acc 78.26% | task weights 0.000/1.000
+  epoch 03/30 | val selected acc 80.30% | task weights 0.000/1.000
+  epoch 04/30 | val selected acc 81.36% | task weights 0.000/1.000
+  epoch 05/30 | val selected acc 82.60% | task weights 0.000/1.000
+  epoch 06/30 | val selected acc 83.36% | task weights 0.000/1.000
+  epoch 07/30 | val selected acc 83.80% | task weights 0.000/1.000
+  epoch 08/30 | val selected acc 84.06% | task weights 0.000/1.000
+  epoch 09/30 | val selected acc 84.08% | task weights 0.000/1.000
+  epoch 10/30 | val selected acc 84.10% | task weights 0.000/1.000
+  epoch 11/30 | val selected acc 84.60% | task weights 0.000/1.000
+  epoch 12/30 | val selected acc 84.48% | task weights 0.000/1.000
+  epoch 13/30 | val selected acc 84.84% | task weights 0.000/1.000
+  epoch 14/30 | val selected acc 84.76% | task weights 0.000/1.000
+  epoch 15/30 | val selected acc 84.66% | task weights 0.000/1.000
+  epoch 16/30 | val selected acc 84.90% | task weights 0.000/1.000
+  epoch 17/30 | val selected acc 85.24% | task weights 0.000/1.000
+  epoch 18/30 | val selected acc 85.22% | task weights 0.000/1.000
+  epoch 19/30 | val selected acc 85.08% | task weights 0.000/1.000
+  epoch 20/30 | val selected acc 85.14% | task weights 0.000/1.000
+  epoch 21/30 | val selected acc 85.40% | task weights 0.000/1.000
+  epoch 22/30 | val selected acc 85.50% | task weights 0.000/1.000
+  epoch 23/30 | val selected acc 85.30% | task weights 0.000/1.000
+  epoch 24/30 | val selected acc 85.50% | task weights 0.000/1.000
+  epoch 25/30 | val selected acc 85.42% | task weights 0.000/1.000
+  epoch 26/30 | val selected acc 85.36% | task weights 0.000/1.000
+  epoch 27/30 | val selected acc 85.60% | task weights 0.000/1.000
+  epoch 28/30 | val selected acc 85.86% | task weights 0.000/1.000
+  epoch 29/30 | val selected acc 85.48% | task weights 0.000/1.000
+  epoch 30/30 | val selected acc 85.68% | task weights 0.000/1.000
+TEST coarse_only seed=0 | fine=None | coarse=85.42 | best_epoch=28
+Outputs: runs_perturb\fine20\coarse_only\seed_0
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\train.py --features-dir data\features --runs-dir runs_perturb\fine20 --method coarse_only --seed 1 --epochs 30 --batch-size 256 --alpha 1.5 --weight-lr 0.01 --device auto --fixed-fine 1.0 --fixed-coarse 1.0 --feature-noise none --feature-noise-level 0.0 --label-noise fine --label-noise-rate 0.2 --train-fraction 1.0 --corruption-seed 1729
+RUN coarse_only seed=1 on cuda; train=45000, val=5000, test=10000; feature_noise=none:0.0; label_noise=fine:0.2 (8851 changed); train_fraction=1.0
+  epoch 01/30 | val selected acc 72.72% | task weights 0.000/1.000
+  epoch 02/30 | val selected acc 77.82% | task weights 0.000/1.000
+  epoch 03/30 | val selected acc 80.40% | task weights 0.000/1.000
+  epoch 04/30 | val selected acc 81.44% | task weights 0.000/1.000
+  epoch 05/30 | val selected acc 82.70% | task weights 0.000/1.000
+  epoch 06/30 | val selected acc 82.82% | task weights 0.000/1.000
+  epoch 07/30 | val selected acc 83.66% | task weights 0.000/1.000
+  epoch 08/30 | val selected acc 83.54% | task weights 0.000/1.000
+  epoch 09/30 | val selected acc 84.12% | task weights 0.000/1.000
+  epoch 10/30 | val selected acc 84.22% | task weights 0.000/1.000
+  epoch 11/30 | val selected acc 84.56% | task weights 0.000/1.000
+  epoch 12/30 | val selected acc 84.66% | task weights 0.000/1.000
+  epoch 13/30 | val selected acc 84.74% | task weights 0.000/1.000
+  epoch 14/30 | val selected acc 84.96% | task weights 0.000/1.000
+  epoch 15/30 | val selected acc 84.96% | task weights 0.000/1.000
+  epoch 16/30 | val selected acc 85.12% | task weights 0.000/1.000
+  epoch 17/30 | val selected acc 85.16% | task weights 0.000/1.000
+  epoch 18/30 | val selected acc 85.36% | task weights 0.000/1.000
+  epoch 19/30 | val selected acc 85.08% | task weights 0.000/1.000
+  epoch 20/30 | val selected acc 85.32% | task weights 0.000/1.000
+  epoch 21/30 | val selected acc 85.52% | task weights 0.000/1.000
+  epoch 22/30 | val selected acc 85.42% | task weights 0.000/1.000
+  epoch 23/30 | val selected acc 85.32% | task weights 0.000/1.000
+  epoch 24/30 | val selected acc 85.48% | task weights 0.000/1.000
+  epoch 25/30 | val selected acc 85.44% | task weights 0.000/1.000
+  epoch 26/30 | val selected acc 85.50% | task weights 0.000/1.000
+  epoch 27/30 | val selected acc 85.62% | task weights 0.000/1.000
+  epoch 28/30 | val selected acc 85.62% | task weights 0.000/1.000
+  epoch 29/30 | val selected acc 85.64% | task weights 0.000/1.000
+  epoch 30/30 | val selected acc 85.62% | task weights 0.000/1.000
+TEST coarse_only seed=1 | fine=None | coarse=85.56 | best_epoch=29
+Outputs: runs_perturb\fine20\coarse_only\seed_1
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\train.py --features-dir data\features --runs-dir runs_perturb\fine20 --method coarse_only --seed 2 --epochs 30 --batch-size 256 --alpha 1.5 --weight-lr 0.01 --device auto --fixed-fine 1.0 --fixed-coarse 1.0 --feature-noise none --feature-noise-level 0.0 --label-noise fine --label-noise-rate 0.2 --train-fraction 1.0 --corruption-seed 1729
+RUN coarse_only seed=2 on cuda; train=45000, val=5000, test=10000; feature_noise=none:0.0; label_noise=fine:0.2 (8840 changed); train_fraction=1.0
+  epoch 01/30 | val selected acc 73.94% | task weights 0.000/1.000
+  epoch 02/30 | val selected acc 78.18% | task weights 0.000/1.000
+  epoch 03/30 | val selected acc 80.76% | task weights 0.000/1.000
+  epoch 04/30 | val selected acc 81.88% | task weights 0.000/1.000
+  epoch 05/30 | val selected acc 82.42% | task weights 0.000/1.000
+  epoch 06/30 | val selected acc 83.30% | task weights 0.000/1.000
+  epoch 07/30 | val selected acc 83.84% | task weights 0.000/1.000
+  epoch 08/30 | val selected acc 84.04% | task weights 0.000/1.000
+  epoch 09/30 | val selected acc 84.26% | task weights 0.000/1.000
+  epoch 10/30 | val selected acc 84.36% | task weights 0.000/1.000
+  epoch 11/30 | val selected acc 84.60% | task weights 0.000/1.000
+  epoch 12/30 | val selected acc 84.72% | task weights 0.000/1.000
+  epoch 13/30 | val selected acc 84.62% | task weights 0.000/1.000
+  epoch 14/30 | val selected acc 84.94% | task weights 0.000/1.000
+  epoch 15/30 | val selected acc 84.94% | task weights 0.000/1.000
+  epoch 16/30 | val selected acc 85.20% | task weights 0.000/1.000
+  epoch 17/30 | val selected acc 85.38% | task weights 0.000/1.000
+  epoch 18/30 | val selected acc 85.54% | task weights 0.000/1.000
+  epoch 19/30 | val selected acc 85.48% | task weights 0.000/1.000
+  epoch 20/30 | val selected acc 85.10% | task weights 0.000/1.000
+  epoch 21/30 | val selected acc 85.64% | task weights 0.000/1.000
+  epoch 22/30 | val selected acc 85.54% | task weights 0.000/1.000
+  epoch 23/30 | val selected acc 85.56% | task weights 0.000/1.000
+  epoch 24/30 | val selected acc 85.62% | task weights 0.000/1.000
+  epoch 25/30 | val selected acc 85.50% | task weights 0.000/1.000
+  epoch 26/30 | val selected acc 85.66% | task weights 0.000/1.000
+  epoch 27/30 | val selected acc 85.74% | task weights 0.000/1.000
+  epoch 28/30 | val selected acc 85.74% | task weights 0.000/1.000
+  epoch 29/30 | val selected acc 85.74% | task weights 0.000/1.000
+  epoch 30/30 | val selected acc 85.78% | task weights 0.000/1.000
+TEST coarse_only seed=2 | fine=None | coarse=85.55 | best_epoch=30
+Outputs: runs_perturb\fine20\coarse_only\seed_2
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\summarize.py --runs-dir runs_perturb\fine20 --out-dir results_perturb\fine20
+
+Summary (test set, accuracy %; sample SD):
+  fine_only    n=3: fine 76.43 +/- 0.08 | coarse N/A
+  coarse_only  n=3: fine N/A | coarse 85.51 +/- 0.08
+  equal        n=3: fine 76.41 +/- 0.22 | coarse 85.41 +/- 0.16
+  uncertainty  n=3: fine 75.33 +/- 0.38 | coarse 85.63 +/- 0.12
+  gradnorm     n=3: fine 76.62 +/- 0.04 | coarse 84.35 +/- 0.12
+Saved: results_perturb\fine20\summary.csv and results_perturb\fine20\summary.json
+
+> D:\Program Files\anaconda\python.exe D:\Sept\学习\专业课\前沿\Multi-task\plot_results.py --runs-dir runs_perturb\fine20 --out-dir results_perturb\fine20\figures
+Saved results_perturb\fine20\figures\validation_fine.png
+Saved results_perturb\fine20\figures\validation_coarse.png
+Saved results_perturb\fine20\figures\weight_fine.png
+Saved results_perturb\fine20\figures\weight_coarse.png
+Saved results_perturb\fine20\figures\gradnorm_fine.png
+Saved results_perturb\fine20\figures\gradnorm_coarse.png
+Saved results_perturb\fine20\figures\gradnorm_rate_fine.png
+Saved results_perturb\fine20\figures\gradnorm_observed_vs_target.png
+
+Done.
+Saved results_perturb\overview.csv (21 rows; accuracy differences in percentage points).
+Compare each method to Equal Weight *within the same scenario*.
