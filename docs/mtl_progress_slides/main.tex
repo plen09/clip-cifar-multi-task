@@ -126,7 +126,6 @@ G_i^{\rm target}(t)=\bar G(t)[r_i(t)]^\alpha,
 \begin{center}
 \includegraphics[width=0.94\linewidth,height=0.70\textheight,keepaspectratio]{table_2.png}
 \end{center}
-\small 笔记中记录的结果：GradNorm 在 ResNet、VGG 两种 backbone 上的多项指标表现较好。
 \end{frame}
 
 \begin{frame}{实验经过与 GPT 的参与}
@@ -138,7 +137,7 @@ G_i^{\rm target}(t)=\bar G(t)[r_i(t)]^\alpha,
 \end{enumerate}
 \end{frame}
 
-\begin{frame}{Fine + Coarse：干净数据的准确率曲线}
+\begin{frame}{Fine + Coarse}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.49\textwidth}
 \centering
@@ -154,11 +153,11 @@ G_i^{\rm target}(t)=\bar G(t)[r_i(t)]^\alpha,
 \medskip
 \begin{itemize}\setlength{\itemsep}{5pt}
 \item Equal、Uncertainty、GradNorm 的曲线较接近，训练后期没有明显拉开差距，单任务曲线整体略高。
-\item 对应测试集上，两任务平均准确率相对 Equal 仅提高约 0.06、0.09 pp。原先的 Fine/Coarse 设置未显示明显的动态加权收益。
+\item 对应测试集上，两任务平均准确率相对 Equal 仅提高约 0.06、0.09 pp。
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Fine + Coarse：加入标签噪声后的准确率}
+\begin{frame}{Fine + Coarse：加入标签噪声}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.49\textwidth}
 \centering
@@ -189,8 +188,7 @@ G_i^{\rm target}(t)=\bar G(t)[r_i(t)]^\alpha,
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Fine + Rotation：测试结果}
-\small 测试准确率（\%），三个种子的均值 $\pm$ 样本标准差。
+\begin{frame}{Fine + Rotation}
 \begin{center}
 \begin{tabular}{lccc}
 \toprule
@@ -237,7 +235,7 @@ PCGrad & $72.57\pm0.25$ & $55.30\pm0.23$ & $63.93\pm0.24$\\
 \item 阅读 Uncertainty Weighting 与 GradNorm，整理了概率推导、梯度平衡公式和论文中的实验结果。
 \item 最初尝试 CIFAR-100 Fine + Coarse，随后加入噪声与少样本对照。
 \item 让 GPT 构思并完成异质任务实验，并在 GPT 指导下加入 PCGrad。
-\item 目前结果中，GradNorm 的变化主要体现在两项任务的取舍上，PCGrad 的平均提升较小，逐种子表现有差异。
+\item 目前结果中，GradNorm 的变化主要体现在两项任务的取舍上，PCGrad 的平均提升较小。
 \end{itemize}
 \end{frame}
 \end{document}
